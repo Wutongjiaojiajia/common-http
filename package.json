@@ -1,6 +1,6 @@
 {
   "name": "jimmy-common-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "通用HTTP方法",
   "main": "dist/index.js",
   "scripts": {
