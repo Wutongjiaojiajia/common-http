@@ -18,7 +18,7 @@ const http = ({
     timeout,
     isOriginalGET,
     errorCallback,
-    extraConfig,
+    extraConfig
 }) => {
     // axios 默认设置
     axios.defaults.retry = 3;
