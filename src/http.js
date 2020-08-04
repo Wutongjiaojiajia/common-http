@@ -6,8 +6,8 @@ import axios from 'axios';
  * params: 参数
  * timeout: 超时时间
  * isOriginalGET: 是否传统get传参
- * changeJwtCallback：换jwt回调
  * extraConfig: 其他 axios 配置项 ---10291211/v0.0.3
+ * errorCallback: 错误信息返回处理
  */
 
 
@@ -20,9 +20,6 @@ const http = ({
     errorCallback,
     extraConfig
 }) => {
-    // axios 默认设置
-    axios.defaults.retry = 3;
-    axios.defaults.retryDelay = 1000;
     // axios 拦截器
     axios.interceptors.response.use(
         response => {
