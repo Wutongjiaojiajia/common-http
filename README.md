@@ -7,7 +7,7 @@
 ### 安装方法
 
 ```bash
-npm install common-http
+npm install jimmy-common-http
 ```
 
 ### http使用方法

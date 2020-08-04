@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("common-http", [], factory);
+		define("jimmy-common-http", [], factory);
 	else if(typeof exports === 'object')
-		exports["common-http"] = factory();
+		exports["jimmy-common-http"] = factory();
 	else
-		root["common-http"] = factory();
+		root["jimmy-common-http"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -981,8 +981,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * params: 参数
  * timeout: 超时时间
  * isOriginalGET: 是否传统get传参
- * changeJwtCallback：换jwt回调
  * extraConfig: 其他 axios 配置项 ---10291211/v0.0.3
+ * errorCallback: 错误信息返回处理
  */
 
 const http = ({
@@ -994,9 +994,6 @@ const http = ({
     errorCallback,
     extraConfig
 }) => {
-    // axios 默认设置
-    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.retry = 3;
-    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.retryDelay = 1000;
     // axios 拦截器
     __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.response.use(response => {
         return response;
